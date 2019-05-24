@@ -8,10 +8,9 @@
           crossorigin="anonymous" />
 </head>
 <body>
-<form action="#"
-      th:action="@{/process}"
-      th:object="${message}"
-      method="post">
+<form method="POST" action="/process" th:object="${message}"
+      enctype="multipart/form-data">
+
     Content :<input type="text" th:field="*{content}" />
     <span th:if="${#fields.hasErrors('content')}"
           th:errors="*{content}"></span><br />
@@ -22,6 +21,9 @@
     <span th:if="${#fields.hasErrors('sentby')}"
           th:errors="*{sentby}"></span>
     <br />
+    <input type="file" name="file" /><br/>
+    <br/>
+gi
     <input type="submit" value="Submit" />
 </form>
 

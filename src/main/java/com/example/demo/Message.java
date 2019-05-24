@@ -26,6 +26,17 @@ public class Message {
     @Size(min = 10)
     private String sentby;
 
+    public String getHeadshot() {
+        return headshot;
+    }
+
+    public void setHeadshot(String headshot) {
+        this.headshot = headshot;
+    }
+
+    private String headshot;
+
+
 //    public Message(@NotNull @Size(min = 2) String content,
 //                   @NotNull @Size(min = 3) String posteddate,
 //                   @NotNull @Size(min = 10) String sentby) {
